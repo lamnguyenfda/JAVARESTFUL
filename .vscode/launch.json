@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DemoLamDa",
+            "request": "launch",
+            "mainClass": "com.demolambda.main.DemoLamDa",
+            "projectName": "demolambda"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemolambdaApplication<demolambda>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.demolambda.DemolambdaApplication",
+            "projectName": "demolambda",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
