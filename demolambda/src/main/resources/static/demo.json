@@ -1,0 +1,10 @@
+{
+    "name": "NGuyenNgoc Lam",
+    "marks": 7.5,
+    "gender": true,
+    "contracts": {
+      "email": "Lamnguyengp01@gmail.com",
+      "phone": "098759030"
+    },
+    "sujects": ["com", "shit"]
+  }
