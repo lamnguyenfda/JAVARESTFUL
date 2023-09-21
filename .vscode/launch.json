@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DemoStreamApi",
+            "request": "launch",
+            "mainClass": "com.demolambda.main.DemoStreamApi",
+            "projectName": "demolambda"
+        },
+        {
+            "type": "java",
             "name": "DemoLamDa",
             "request": "launch",
             "mainClass": "com.demolambda.main.DemoLamDa",
