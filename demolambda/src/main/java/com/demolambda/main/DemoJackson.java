@@ -2,8 +2,11 @@
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,16 +14,38 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class DemoJackson {
     public static void main(String[] args) throws Exception{
 
-     demo2();
+     demo3();
+
     }
+
+
+
+    private static void demo3() {
+          String json = "{\r\n" +
+                " \"name\": \"Nguyen ngoc Lam\",\r\n" +
+                " \"marks\": 7.5,\r\n" +
+                " \"gender\": true,\r\n" +
+                " \"contacts\":{\r\n" +
+                " \"email\": \"Nguyen@gmail.com\",\r\n" +
+                " \"phone\": \"0984629221\"\r\n" +
+                "}\r\n" +
+                "}";    
+        ObjectMapper op = new ObjectMapper();
+        Map<String,Object> mapp = op.readValue(json,new TypeReference( Map<String,Object>{};));
+        
+    } 
 
     private static void demo2() throws IOException {
         // Đọc data từ file JSON bên ngoài 
      
        ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.readTree(new File("D:\\WORKSSPACE\\JAVARESTFUL\\demolambda\\src\\main\\resources\\static\\demo.json"));
+        JsonNode node = mapper.readTree(new File("demolambda/src/main/resources/static/demo.json"));
 
         System.out.println(node.get("name").asText());
+        node.get("subjects").iterator().forEachRemaining(arg0 -> {String subject = arg0.asText();
+            System.out.println(subject);
+        } 
+        );
     }
 
     private static void demo1() throws Exception {
