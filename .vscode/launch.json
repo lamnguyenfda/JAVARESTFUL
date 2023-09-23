@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
+=======
+            "name": "DemoJackson",
+            "request": "launch",
+            "mainClass": "com.demolambda.main.DemoJackson",
+            "projectName": "demolambda"
+        },
+        {
+            "type": "java",
+>>>>>>> a40689f031c72266e13bce07efc326347db53350
             "name": "DemoStreamApi",
             "request": "launch",
             "mainClass": "com.demolambda.main.DemoStreamApi",
@@ -22,7 +32,8 @@
             "mainClass": "com.demolambda.DemolambdaApplication",
             "projectName": "demolambda",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=65308 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=demolambda"
         }
     ]
 }
