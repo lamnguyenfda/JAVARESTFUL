@@ -13,11 +13,12 @@ public class DemoLamDa {
     static Map<Integer,Student> mapp =  new HashMap<Integer,Student>();
     
     static List<Student> lst = Arrays.asList(
-            new Student("NGuyen noc lam ", true, 9.9),
-            new Student("NGuyen noc huyen ", false, 9.5),
-            new Student("NGuyen noc duy ", true, 9.4),
-            new Student("NGuyen noc hieu ", false, 10.0),
-            new Student("NGuyen noc guyrtmn ", true, 7.5));
+    //         new Student("NGuyen noc lam ", true, 9.9),
+    //         new Student("NGuyen noc huyen ", false, 9.5),
+    //         new Student("NGuyen noc duy ", true, 9.4),
+    //         new Student("NGuyen noc hieu ", false, 10.0),
+            // new Student("NGuyen noc guyrtmn ", true, 7.5)
+            );
 
     public static void main(String[] args) {
        for (int i = 0; i < lst.size(); i++) {

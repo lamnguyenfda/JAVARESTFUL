@@ -1,1 +1,45 @@
-{"gender":true,"Contacts":{"phone":"0982912623","email":"slamnguyengp01@gmail.com"},"subjects":["Com107","ent201"],"name":"NGuyen van a ","marks":8.9}
+[
+    {
+        "gender": true,
+        "contacts": {
+            "phone": "0982912623",
+            "email": "slamnguyengp01@gmail.com"
+        },
+        "subjects": [
+            "Com107",
+            "ent201"
+        ],
+        "name": "Nguyen Van A",
+        "marks": 8.9
+    },
+    {
+        "gender": false,
+        "contacts": {
+            "phone": "0987654321",
+            "email": "johndoe@example.com"
+        },
+        "subjects": [
+            "Math101",
+            "Eng202",
+            "Eng2042",
+            "Eng2022",
+            "Eng2302"
+            
+        ],
+        "name": "John Doe",
+        "marks": 7.5
+    },
+    {
+        "gender": true,
+        "contacts": {
+            "phone": "0123456789",
+            "email": "janedoe@example.com"
+        },
+        "subjects": [
+            "Sci301",
+            "Hist401"
+        ],
+        "name": "Jane Doe",
+        "marks": 9.2
+    }
+]
