@@ -33,14 +33,14 @@ public class DemoLamDa {
          d.sum(4);
     }
 
-    private static void demo3() {
-        Collections.sort(lst, (arg0, arg1) -> -arg0.getGpa().compareTo(arg1.getGpa()));
-        demo2();
-    }
+    // private static void demo3() {
+    //     Collections.sort(lst, (arg0, arg1) -> -arg0.getGpa().compareTo(arg1.getGpa()));
+    //     demo2();
+    // }
 
-    private static void demo2() {
-        lst.forEach(arg0 -> System.out.println(arg0.getName() + " " + arg0.getGpa()));
-    }
+    // private static void demo2() {
+    //     lst.forEach(arg0 -> System.out.println(arg0.getName() + " " + arg0.getGpa()));
+    // }
 
     public static void demo1() {
         List<Integer> ls = Arrays.asList(1, 3, 45, 3, 2, 23, 23, 3, 23, 2, 32);
