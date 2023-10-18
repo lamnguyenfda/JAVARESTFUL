@@ -11,7 +11,7 @@ public class HomeController {
 
      @GetMapping("index")
      public String getPage(ModelMap model){
-       model.addAttribute("message", "HelloLam ");
-        return "home";
+       model.addAttribute("message", "HelloLam");
+        return "Page";
      }
 }

@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport">
+  </head>
+  <body th:with="y ='polytechnic'">
+    <h1>heloo</h1>
+    <div th:replace="fragments/frags::frag1"></div>
+    <div th:replace="fragments/frags::frag2(~{::#x/text()},${y})">
+        <i id = "x" th:remove="all">FPT</i>
+    </div>
+ 
+  </body> 
+</html>
