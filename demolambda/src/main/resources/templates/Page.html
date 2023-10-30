@@ -1,16 +1,19 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <title>Title</title>
-    <meta charset="utf-8">
-    <meta name="viewport">
-  </head>
-  <body th:with="y ='polytechnic'">
-    <h1>heloo</h1>
-    <div th:replace="fragments/frags::frag1"></div>
-    <div th:replace="fragments/frags::frag2(~{::#x/text()},${y})">
-        <i id = "x" th:remove="all">FPT</i>
-    </div>
- 
-  </body> 
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(view)">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body th:with="y ='polytechnic'">
+  <nav th:replace="layout/nav :: nav"></nav>
+  <main th:replace="${view}"></main>
+</body>
+
 </html>

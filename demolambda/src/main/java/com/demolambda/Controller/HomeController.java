@@ -12,6 +12,11 @@ public class HomeController {
      @GetMapping("index")
      public String getPage(ModelMap model){
        model.addAttribute("message", "HelloLam");
-        return "Page";
+        return "#";
+     }
+          @GetMapping("link")
+     public String getLInk(ModelMap model){
+       model.addAttribute("message", "HelloLam");
+        return "link";
      }
 }

@@ -13,6 +13,7 @@ public class Student {
     private String name;
     private Boolean gender;
     private Double marks;
-    private Contact contacts;
-    private List<String> subjects;
+    private String country;
+    private String email;
+ 
 }

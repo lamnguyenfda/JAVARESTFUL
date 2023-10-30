@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="margin-left: 100px;">
+  <div class="row">
+    <div class="col-4">
+      <div class="form-0" style="width: 400px;margin-left: 30px;">
+        <h1> DEMO RESTFULL API</h1>
+        <hr>
+        <form action= "/rest/create"  th:object="${STUDENT}" method="post">
+          <div class="form-group">
+            <label for="name">Name :</label>
+            <input type="text" class="form-control" th:field="*{name}" name="name" id="name" aria-describedby="helpId"
+              placeholder="">
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" th:field="*{gender}" name="gender" id="gender" value="true"
+                checked>
+              Male
+            </label>
+            <label class="form-check-label" style="margin-left: 50px;">
+              <input type="radio" class="form-check-input" th:field="*{gender}" name="gender" id="gender" value="false">
+              Female
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="masks">Masks :</label>
+            <input type="text" class="form-control" th:field="*{marks}" name="marks" id="marks"
+              aria-describedby="helpId" placeholder="0.0">
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select class="form-control" th:field="*{country}" name="country" id="country">
+              <option th:value="VN">Việt Nam </option>
+              <option th:value="US">Hoa Kỳ </option>
+              <option th:value="UK">Anh Quốc</option>
+            </select>
+          </div>
+          <hr>
+          <h6>Contact :</h6>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" class="form-control" th:field="*{email}" name="email" id="email"
+              aria-describedby="helpId" placeholder="">
+          </div>
+          <button name="add" class="btn btn-primary" type="submit">ADD</button>
+          <button name="update" id="" class="btn btn-primary"  th:formaction="@{|/rest/update/${key}|}">UPDATE</button>
+          <button name="delete" id="" class="btn btn-primary" th:formaction="@{|/rest/delete/${key}|}" role="button">DELETE</button>
+          <button type="reset" class="btn btn-primary" th:href ="@{/rest/index}">RESET</button>
+        </form>
+        <hr>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <div class="col-8">
+      <div class="table_model">
+        <table class="table table-striped table-inverse" style="width: 900px;">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Name</th>
+              <th>Masks</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>country</th>
+              <th>Email</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="item : ${liststudent}" th:object="${item.value}">
+              <td th:text="*{name}"></td>
+              <td th:text="*{marks}"></td>
+              <td th:text="*{gender}?'Male':'Female'"></td>
+              <td th:text="*{country}"></td>
+              <td th:text="*{email}"></td>
+              <td><a name="delete" id="" class="btn btn-primary" th:href="@{|/rest/delete/${item.key}|}" role="button">DELETE</a>
+                <a name="reset" id="" class="btn btn-primary" th:href="@{|/rest/edit/${item.key}|}" role="button">EDIT</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
