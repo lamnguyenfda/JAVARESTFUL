@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/home/ ")  
+@RequestMapping("/home/")  
 public class HomeController {
 
      @GetMapping("index")
      public String getPage(ModelMap model){
-       model.addAttribute("message", "HelloLam");
+       model.addAttribute("message", "HelloooLam");
         return "#";
      }
           @GetMapping("link")
